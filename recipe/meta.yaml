@@ -25,15 +25,11 @@ requirements:
   run:
     - python >={{ python_min }}
     - fiona
-    - flopy
-    - matplotlib-base
-    - netCDF4
+    - affine
     - numpy
     - geopandas
     - rasterio >=1.2.2
-    - scipy
     - shapely
-    - xarray
 
 test:
   imports:
