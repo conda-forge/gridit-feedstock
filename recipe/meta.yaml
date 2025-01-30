@@ -1,5 +1,5 @@
 {% set name = "gridit" %}
-{% set version = "0.6" %}
+{% set version = "0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gridit-{{ version }}.tar.gz
-  sha256: d8e264235aa953e9df4a9e3cec624cd6d32c9666db099e60a476c3d11909dc30
+  sha256: 3eec9ee5caee4f94551e4e9a6d6b91c4a934e43d5edac5212888ebeceea40700
 
 build:
   entry_points:
     - gridit = gridit.__main__:cli_main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -25,15 +25,11 @@ requirements:
   run:
     - python >={{ python_min }}
     - fiona
-    - flopy
-    - matplotlib-base
-    - netCDF4
+    - affine
     - numpy
     - geopandas
     - rasterio >=1.2.2
-    - scipy
     - shapely
-    - xarray
 
 test:
   imports:
