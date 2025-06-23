@@ -1,5 +1,6 @@
 {% set name = "gridit" %}
-{% set version = "0.7" %}
+{% set version = "0.8" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/gridit-{{ version }}.tar.gz
-  sha256: 3eec9ee5caee4f94551e4e9a6d6b91c4a934e43d5edac5212888ebeceea40700
+  sha256: 567065388bdfc2f164a6d77724003f12b74deb8523a98c9ac3959dbf8352f9db
 
 build:
   entry_points:
